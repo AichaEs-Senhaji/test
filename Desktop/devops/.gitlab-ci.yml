@@ -1,0 +1,19 @@
+stages:
+  - compile
+  - test
+  - package
+
+compile_job:
+  stage: compile
+  script:
+    - mvn clean compile
+
+test_job:
+  stage: test
+  script:
+    - mvn clean test
+
+package_job:  
+  stage: package
+  script:
+    - mvn clean package
